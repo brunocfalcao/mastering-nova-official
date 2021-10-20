@@ -1,11 +1,11 @@
 {
-    "name": "brunocfalcao/mastering-nova",
+    "name": "brunocfalcao/mastering-nova-official",
     "description": "Eduka Course on Mastering Nova website package, works with Eduka LMS",
     "keywords": [
         "brunocfalcao",
         "eduka"
     ],
-    "homepage": "https://github.com/brunocfalcao/mastering-nova",
+    "homepage": "https://github.com/brunocfalcao/mastering-nova-official",
     "license": "MIT",
     "type": "library",
     "authors": [
