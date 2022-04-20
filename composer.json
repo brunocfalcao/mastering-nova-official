@@ -1,0 +1,46 @@
+{
+    "name": "brunocfalcao/mastering-nova-official",
+    "description": "Eduka Course on Nova Advanced UI website package, works with Eduka LMS",
+    "keywords": [
+        "brunocfalcao",
+        "eduka"
+    ],
+    "homepage": "https://github.com/brunocfalcao/mastering-nova-official",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Bruno Falcão",
+            "email": "bruno.c.falcao@brunofalcao.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "brunocfalcao/eduka-nereus": "dev-master",
+        "spatie/laravel-honeypot": "^3.0",
+        "brunocfalcao/blade-feather-icons": "^2.0",
+        "codeat3/blade-eos-icons": "^1.9"
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eduka\\MasteringNovaOfficial\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "post-update-cmd": [
+            "@php artisan vendor:publish --provider=Eduka\\MasteringNovaOfficial\\EdukaMasteringNovaOfficialServiceProvider --force"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

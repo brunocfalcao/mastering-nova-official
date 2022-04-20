@@ -1,0 +1,83 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.skew {
+    display: none;
+}
+
+.skewed-top-right .skew-top.mr-for-radius {
+    display: block;
+}
+
+.skewed-top-left .skew-top.ml-for-radius {
+    display: block;
+}
+
+.skewed-bottom-right .skew-bottom.mr-for-radius {
+    display: block;
+}
+
+.skewed-bottom-left .skew-bottom.ml-for-radius {
+    display: block;
+}
+
+.skewed-top-right .radius-for-skewed {
+    border-top-right-radius: 6rem;
+}
+
+.skewed-top-left .radius-for-skewed {
+    border-top-left-radius: 6rem;
+}
+
+.skewed-bottom-right .radius-for-skewed {
+    border-bottom-right-radius: 6rem;
+}
+
+.skewed-bottom-left .radius-for-skewed {
+    border-bottom-left-radius: 6rem;
+}
+
+@layer components {
+
+    .button {
+        @apply font-semibold
+               leading-loose
+               rounded-l-xl
+               rounded-t-xl
+               transition
+               duration-200
+               py-2
+               px-6
+               border-2
+               text-sm;
+    }
+
+    .button-secondary-blue {
+        @apply hover:border-blue-200
+               hover:text-white
+               bg-blue-800
+               border-blue-600
+               text-blue-600;
+    }
+
+    .button-primary-blue {
+        @apply hover:border-blue-100
+               hover:text-blue-200
+               bg-blue-600
+               border-blue-100
+               text-white;
+    }
+
+    .link-light-blue {
+        @apply underline
+               text-blue-200
+    }
+
+    .link-blue {
+        @apply underline
+               text-blue-600
+    }
+}
