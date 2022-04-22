@@ -26,16 +26,16 @@ class LoadCourseData extends Migration
         /**
          * Import data from the CSV data sources.
          */
-        $basePath = session('mastering-nova-official-course-base-path');
-        $assetsPath = $basePath.'database/assets/';
+        $basePath = __DIR__ . '/../../';
+        $assetsPath = $basePath . 'database/assets/';
 
         // Add Series.
         $orion = Series::create([
-            'title' => 'Orion (3.x)',
+            'title' => 'Orion(3.x)',
         ]);
 
         $silverSurfer = Series::create([
-            'title' => 'Silver Surfer (4.x)',
+            'title' => 'Silver Surfer(4.x)',
         ]);
 
         // CSV chapters.csv -- All part of the first series.
@@ -125,17 +125,17 @@ class LoadCourseData extends Migration
             19 => 'the-full-power-of-resource-policies.jpg',
             20 => 'single-package-creation-for-all-of-your-ui-components.jpg',
             21 => 'customizing-your-resource-visibility.jpg',
-            22 => 'how-to-correctly-use-the-index-query.jpg',
+            22 => 'how-to-correctly-use the-index-query.jpg',
             23 => 'using-resource-data-scopes.jpg',
-            24 => 'cloning-resources-for-a-better-resource-strategy.jpg',
+            24 => 'cloning-resources-for -a-better-resource-strategy.jpg',
             25 => 'polymorphic-relationships.jpg',
             26 => 'many-to-many-relationship-with-additional-pivot-columns.jpg',
             27 => 'changing-stub-files.jpg',
-            28 => 'configuring-field-groups-for-each-display-context.jpg',
+            28 => 'configuring-field-groups-for -each-display-context.jpg',
             29 => 'resource-1-o-1-checklist-guidelines.jpg',
             30 => 'what-is-an-ui-component.jpg',
             31 => 'designing-a-simple-ui-component.jpg',
-            32 => 'ui-component-properties-you-can-use.jpg',
+            32 => 'ui-component-properties-you-can-use jpg',
             33 => 'extending-default-nova-ui-components.jpg',
             34 => 'using-emit-events.jpg',
             35 => 'practical-example-2-dropdowns.jpg',
@@ -153,13 +153,16 @@ class LoadCourseData extends Migration
             47 => 'ajax-child-select.jpg',
             48 => 'nova-assertions.jpg',
             49 => 'responsive-theme.jpg',
-            50 => 'integrating-socialite-for-oauth-authentication.jpg',
+            50 => 'integrating-socialite-for -oauth-authentication.jpg',
             51 => 'package-spatie-laravel-multitenancy.jpg',
         ];
 
         foreach ($mappingFiles as $id => $filename) {
             Video::firstWhere('id', $id)
-                 ->addMedia(with_dir_separator(__DIR__."/../../resources/images/videos/{$filename}"))
+                 ->addMedia(with_dir_separator(
+                     $basePath .
+                     "resources/images/videos/{$filename}"
+                 ))
                  ->preservingOriginal()
                  ->toMediaCollection()
                  ->save();
@@ -187,7 +190,10 @@ class LoadCourseData extends Migration
     {
         $video = Video::create($fields);
 
-        $path = with_dir_separator(__DIR__."/../resources/images/videos/{$path}");
+        $path = with_dir_separator(
+            __DIR__ .
+            "resources/images/videos/{$path}"
+        );
 
         $video->addMedia($path)
               ->preservingOriginal()
