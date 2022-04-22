@@ -135,7 +135,7 @@ class LoadCourseData extends Migration
             29 => 'resource-1-o-1-checklist-guidelines.jpg',
             30 => 'what-is-an-ui-component.jpg',
             31 => 'designing-a-simple-ui-component.jpg',
-            32 => 'ui-component-properties-you-can-use jpg',
+            32 => 'ui-component-properties-you-can-use.jpg',
             33 => 'extending-default-nova-ui-components.jpg',
             34 => 'using-emit-events.jpg',
             35 => 'practical-example-2-dropdowns.jpg',
