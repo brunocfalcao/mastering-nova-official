@@ -125,7 +125,7 @@ class LoadCourseData extends Migration
             19 => 'the-full-power-of-resource-policies.jpg',
             20 => 'single-package-creation-for-all-of-your-ui-components.jpg',
             21 => 'customizing-your-resource-visibility.jpg',
-            22 => 'how-to-correctly-use the-index-query.jpg',
+            22 => 'how-to-correctly-use-the-index-query.jpg',
             23 => 'using-resource-data-scopes.jpg',
             24 => 'cloning-resources-for -a-better-resource-strategy.jpg',
             25 => 'polymorphic-relationships.jpg',
