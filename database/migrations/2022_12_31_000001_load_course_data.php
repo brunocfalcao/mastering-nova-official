@@ -127,11 +127,11 @@ class LoadCourseData extends Migration
             21 => 'customizing-your-resource-visibility.jpg',
             22 => 'how-to-correctly-use-the-index-query.jpg',
             23 => 'using-resource-data-scopes.jpg',
-            24 => 'cloning-resources-for -a-better-resource-strategy.jpg',
+            24 => 'cloning-resources-for-a-better-resource-strategy.jpg',
             25 => 'polymorphic-relationships.jpg',
             26 => 'many-to-many-relationship-with-additional-pivot-columns.jpg',
             27 => 'changing-stub-files.jpg',
-            28 => 'configuring-field-groups-for -each-display-context.jpg',
+            28 => 'configuring-field-groups-for-each-display-context.jpg',
             29 => 'resource-1-o-1-checklist-guidelines.jpg',
             30 => 'what-is-an-ui-component.jpg',
             31 => 'designing-a-simple-ui-component.jpg',
@@ -153,7 +153,7 @@ class LoadCourseData extends Migration
             47 => 'ajax-child-select.jpg',
             48 => 'nova-assertions.jpg',
             49 => 'responsive-theme.jpg',
-            50 => 'integrating-socialite-for -oauth-authentication.jpg',
+            50 => 'integrating-socialite-for-oauth-authentication.jpg',
             51 => 'package-spatie-laravel-multitenancy.jpg',
         ];
 
