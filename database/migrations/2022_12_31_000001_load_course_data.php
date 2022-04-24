@@ -26,8 +26,8 @@ class LoadCourseData extends Migration
         /**
          * Import data from the CSV data sources.
          */
-        $basePath = __DIR__ . '/../../';
-        $assetsPath = $basePath . 'database/assets/';
+        $basePath = __DIR__.'/../../';
+        $assetsPath = $basePath.'database/assets/';
 
         // Add Series.
         $orion = Series::create([
@@ -160,7 +160,7 @@ class LoadCourseData extends Migration
         foreach ($mappingFiles as $id => $filename) {
             Video::firstWhere('id', $id)
                  ->addMedia(with_dir_separator(
-                     $basePath .
+                     $basePath.
                      "resources/images/videos/{$filename}"
                  ))
                  ->preservingOriginal()
@@ -191,7 +191,7 @@ class LoadCourseData extends Migration
         $video = Video::create($fields);
 
         $path = with_dir_separator(
-            __DIR__ .
+            __DIR__.
             "resources/images/videos/{$path}"
         );
 
