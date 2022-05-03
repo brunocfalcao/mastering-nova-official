@@ -2,6 +2,7 @@
 
 namespace Eduka\MasteringNovaOfficial;
 
+use Brunocfalcao\Cerebrus\Cerebrus;
 use Eduka\Abstracts\EdukaServiceProvider;
 use Eduka\Cube\Models\Course;
 
@@ -17,7 +18,14 @@ class MasteringNovaOfficialServiceProvider extends EdukaServiceProvider
 
         $course = course();
 
-        session([$course->canonical.'-base-path' => str_replace('\\', '/', __DIR__).'/../']);
+        $session = new Cerebrus();
+
+        $session->set(
+            $course->canonical.'-base-path',
+            with_dir_separator(__DIR__ . '/../')
+        );
+
+        $session->set('eduka:course:canonical', $course->canonical);
 
         /**
          * Configure the postmark token. It can't run under the course()
