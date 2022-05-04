@@ -22,7 +22,7 @@ class MasteringNovaOfficialServiceProvider extends EdukaServiceProvider
 
         $session->set(
             $course->canonical.'-base-path',
-            with_dir_separator(__DIR__ . '/../')
+            with_dir_separator(__DIR__.'/../')
         );
 
         $session->set('eduka:course:canonical', $course->canonical);
