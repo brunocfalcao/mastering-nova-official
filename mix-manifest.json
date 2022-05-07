@@ -1,5 +1,6 @@
 {
     "/public/vendor/mastering-nova/js/app.js": "/public/vendor/mastering-nova/js/app.js",
+    "/public/vendor/mastering-nova/css/app.tailwind.css": "/public/vendor/mastering-nova/css/app.tailwind.css",
     "/public/vendor/mastering-nova/js/retina.min.js": "/public/vendor/mastering-nova/js/retina.min.js",
     "/public/vendor/mastering-nova/js/owl.carousel.min.js": "/public/vendor/mastering-nova/js/owl.carousel.min.js",
     "/public/vendor/mastering-nova/js/fitvids.js": "/public/vendor/mastering-nova/js/fitvids.js",
