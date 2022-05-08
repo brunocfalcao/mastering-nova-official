@@ -6,6 +6,7 @@ $quote = Inspiring::quote();
     <x-eduka::head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="/vendor/mastering-nova/css/app.tailwind.css">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/vendor/mastering-nova/css/perfect-scrollbar.css">
         <link rel="stylesheet" href="/vendor/mastering-nova/css/owl.carousel.min.css">
