@@ -6,7 +6,7 @@ use Illuminate\Foundation\Inspiring;
 $quote = Inspiring::quote();
 
 @endphp
-<x-eduka::site title="{{ course()->title }}">
+<x-eduka::site title="My title">
     <x-eduka::head>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/vendor/mastering-nova/css/app.tailwind.css">

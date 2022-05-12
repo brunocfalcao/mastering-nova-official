@@ -16,16 +16,11 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.0",
         "brunocfalcao/eduka-nereus": "dev-master",
         "spatie/laravel-honeypot": "^3.0",
         "brunocfalcao/blade-feather-icons": "^2.0",
-        "codeat3/blade-eos-icons": "^1.9",
-        "brunocfalcao/cerebrus": "dev-master"
-
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.0"
+        "codeat3/blade-eos-icons": "^1.9"
     },
     "autoload": {
         "psr-4": {

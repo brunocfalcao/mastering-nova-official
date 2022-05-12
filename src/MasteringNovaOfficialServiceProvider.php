@@ -10,6 +10,8 @@ class MasteringNovaOfficialServiceProvider extends EdukaServiceProvider
 {
     public function boot()
     {
+        info('[MasteringNovaOfficial][ServiceProvider] Start');
+
         $this->customViewNamespace(__DIR__.'/../resources/views', 'site');
 
         $this->publishResources();
@@ -37,6 +39,8 @@ class MasteringNovaOfficialServiceProvider extends EdukaServiceProvider
 
         // Load extra routes test.
         $this->extraRoutes(__DIR__.'/../routes/extra.php');
+
+        info('[MasteringNovaOfficial][ServiceProvider] Stop');
     }
 
     public function register()

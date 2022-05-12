@@ -17,6 +17,7 @@ mix
    .copy('resources/css/perfect-scrollbar.css', 'public/vendor/mastering-nova/css')
    .copy('resources/css/owl.carousel.min.css', 'public/vendor/mastering-nova/css')
    .copy('resources/css/owl.theme.default.min.css', 'public/vendor/mastering-nova/css')
+   .copyDirectory('resources/images/css', 'public/vendor/mastering-nova/css')
    .postCss('resources/css/app.tailwind.css', 'public/vendor/mastering-nova/css', [
       require("tailwindcss")
    ]);
