@@ -5,18 +5,19 @@ namespace Eduka\MasteringNovaOfficial;
 use Brunocfalcao\Cerebrus\Cerebrus;
 use Eduka\Abstracts\EdukaServiceProvider;
 use Eduka\Cube\Models\Course;
+use Eduka\MasteringNovaOfficial\Commands\PublishCommand;
 
 class MasteringNovaOfficialServiceProvider extends EdukaServiceProvider
 {
     public function boot()
     {
-        info('[MasteringNovaOfficial][ServiceProvider] Start');
-
         $this->customViewNamespace(__DIR__.'/../resources/views', 'site');
 
         $this->publishResources();
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
+        $this->registerCommands();
 
         $course = course();
 
@@ -39,8 +40,6 @@ class MasteringNovaOfficialServiceProvider extends EdukaServiceProvider
 
         // Load extra routes test.
         $this->extraRoutes(__DIR__.'/../routes/extra.php');
-
-        info('[MasteringNovaOfficial][ServiceProvider] Stop');
     }
 
     public function register()
@@ -53,5 +52,12 @@ class MasteringNovaOfficialServiceProvider extends EdukaServiceProvider
         $this->publishes([
             __DIR__.'/../resources/overrides/' => base_path('/'),
         ], 'mastering-nova-official-overrides');
+    }
+
+    protected function registerCommands()
+    {
+        $this->commands([
+            PublishCommand::class,
+        ]);
     }
 }
