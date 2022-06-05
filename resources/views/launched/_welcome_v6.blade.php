@@ -369,12 +369,12 @@ $tweets = [
                 <div class="pt-20 bg-gray-100">
                     <div class="container mx-auto px-4">
                         <div class="mb-10 max-w-md mx-auto text-center">
-                            <h2 class="text-4xl lg:text-5xl font-bold font-heading">{{ $serie->title }} video tutorials</h2>
+                            <h2 class="text-4xl lg:text-5xl font-bold font-heading">{{ $serie->name }} video tutorials</h2>
                         </div>
-                    @foreach($serie->chapters()->orderBy('index')->get() as $chapter)
+                    @foreach($serie->with('chapters')->orderBy('index')->get() as $chapter)
                         <p class="text-blue-800 font-bold text-2xl mb-2">{{ $chapter->title }}</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        @if($chapter->videos()->count() > 0)
+                        @if($chapter->with('videos')->count() > 0)
                             @foreach($chapter->videos()->orderBy('index')->get() as $video)
                             @if($video->is_visible)
                             <div class="mb-6 w-full">

@@ -32,10 +32,12 @@ class LoadCourseData extends Migration
         // Add Series.
         $orion = Series::create([
             'title' => 'Orion(3.x)',
+            'course_id' => 1,
         ]);
 
         $silverSurfer = Series::create([
             'title' => 'Silver Surfer(4.x)',
+            'course_id' => 1,
         ]);
 
         // CSV chapters.csv -- All part of the first series.
@@ -95,6 +97,7 @@ class LoadCourseData extends Migration
         Video::query()->update([
             'series_id' => 1,
             'published_at' => now(),
+            'is_enabled' => true,
         ]);
 
         Chapter::query()->update([
