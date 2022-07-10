@@ -24,7 +24,7 @@ class MasteringNovaOfficialServiceProvider extends EdukaServiceProvider
         $session = new Cerebrus();
 
         $session->set(
-            $course->canonical.'-base-path',
+            $course->canonical.':base-path',
             with_dir_separator(__DIR__.'/../')
         );
 
